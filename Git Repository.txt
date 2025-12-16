@@ -1,0 +1,7 @@
+Smart-Academic-Assistant/
+³ÄÄ README.md
+³ÄÄ app.py
+³ÄÄ requirements.txt
+³ÄÄ .env.example
+³ÄÄ assets/
+³   ÀÄÄ demo.png

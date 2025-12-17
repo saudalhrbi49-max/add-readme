@@ -160,7 +160,7 @@ streamlit run app.py
 
 ### Example Queries (English)
 
-| Query | 
+| Query | Expected Result | 
 |-------|----------------|
 | Visit the hospital portal | 
 | I want to issue a passport | Shows steps to issue passport |

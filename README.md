@@ -26,19 +26,14 @@ The application is built using Streamlit and Python, making it lightweight, easy
 ## 📁 Project Structure
 
 ```
-SAUDI_SERVICES_NAVIGATOR/
+HOSPITAL_SERVICES_NAVIGATOR/
 │
-├── app.py                 # Main Streamlit application (UI)
-├── llm_backend.py         # LLM classification and processing logic
-├── services.json          # Government services database (33 services)
-├── README.md              # This documentation file
-│
-├── logo.png               # App logo (optional - place in root)
-├── icon.png               # Browser favicon (optional - place in root)
-├── background.png         # Background image (optional - place in root)
-│
+├── app.py              # Main Streamlit application
+├── llm_backend.py      # Service matching logic
+├── services.json       # Hospital services database
+├── README.md           # Project documentation
 └── .streamlit/
-    └── config.toml        # Streamlit configuration
+└── config.toml     # Streamlit configuration (optional)
 ```
 
 ---

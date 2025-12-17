@@ -1,0 +1,45 @@
+print("Smart Academic Assistant is running successfully!")
+import os
+
+def smart_academic_assistant(text, task):
+    """
+    Simulated LLM function (works without API key)
+    """
+    if task == "summarize":
+        return f"Summary:\n- This text discusses: {text[:60]}..."
+    elif task == "study_guide":
+        return (
+            "Study Guide:\n"
+            "- Key Concept 1\n"
+            "- Key Concept 2\n"
+            "- Important Notes\n"
+        )
+    elif task == "qa":
+        return "Answer:\nThis is a generated academic answer based on the input."
+    else:
+        return "Invalid task selected."
+
+def main():
+    print("=== Smart Academic Assistant ===")
+    text = input("Enter your academic text: ")
+    print("\nChoose task:")
+    print("1 - Summarize")
+    print("2 - Study Guide")
+    print("3 - Q&A")
+
+    choice = input("Your choice: ")
+
+    task_map = {
+        "1": "summarize",
+        "2": "study_guide",
+        "3": "qa"
+    }
+
+    task = task_map.get(choice, "")
+    result = smart_academic_assistant(text, task)
+
+    print("\n--- Result ---")
+    print(result)
+
+if __name__ == "__main__":
+    main()

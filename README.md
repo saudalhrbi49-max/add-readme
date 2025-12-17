@@ -1,22 +1,25 @@
-# 🇸🇦 Saudi Government Services Navigator
+# 🏥 Hospital Services Navigator
 
-An AI-powered bilingual web application that helps users find Saudi government services using natural language queries in Arabic and English.
+An AI-powered bilingual web application that helps patients access hospital services such as booking appointments, viewing lab results, and managing visits using natural language queries in Arabic and English.
 
 ---
 
 ## 📋 Overview
 
-This application uses a **local Large Language Model (Qwen2.5)** via Ollama to understand user queries and match them to government services. It provides step-by-step instructions for accessing services from platforms like Absher, Saudi Business Center, Qiyas, NWC, and Saudi Electricity.
+Hospital Services Navigator is a simple intelligent web application designed to assist patients in navigating common hospital services. The system understands user questions and provides step-by-step guidance for each service.
 
-### Key Features
+The application is built using Streamlit and Python, making it lightweight, easy to run, and suitable for educational projects.
 
-| Feature | Description |
-|---------|-------------|
-|  **AI-Powered** | Natural language understanding with Qwen2.5 (14B model) |
-|  **Bilingual** | Full support for Arabic (RTL) and English (LTR) |
-|  **Chat Interface** | Modern conversational UI |
-|  **Saudi Theme** | Official government color scheme (green and beige and lavender ) |
-|  **Smart Matching** | Understands context and matches multiple services when needed |
+---
+
+## ✨ Key Features
+
+- 🧠 Natural language understanding (Arabic & English)
+- 🌍 Bilingual support (RTL & LTR)
+- 💬 Chat-based interface
+- 🏥 Hospital service focused
+- ⚡ Fast and lightweight
+- 🎓 Suitable for academic projects
 
 ---
 

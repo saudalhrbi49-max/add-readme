@@ -160,13 +160,14 @@ streamlit run app.py
 
 ### Example Queries (English)
 
-| Query | Expected Result | 
+| Query | - | 
 |-------|----------------|
 | Visit the hospital portal | 
-| I want to issue a passport | Shows steps to issue passport |
-| How to pay electricity bill | Shows steps to pay electricity bill |
-| Check water bill | Shows how to check water bill |
-
+| Login to your patient account | 
+| Choose clinic and doctor | 
+| Select date and time | 
+| Confirm the appointment |
+ 
 ### Multiple Services
 
 The AI can match multiple services in one query:

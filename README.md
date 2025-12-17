@@ -178,7 +178,6 @@ The AI can match multiple services in one query:
 
 ## 📊 Supported Services
 
----
 [
   {
     "key": "appointment_booking",
@@ -211,6 +210,8 @@ The AI can match multiple services in one query:
     "title_en": "Contact Hospital"
   }
 ]
+
+
 
 ---
 

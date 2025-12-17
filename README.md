@@ -1,39 +1,50 @@
-def analyze_resume(resume_text):
+import streamlit as st
+from llm_backend import process_query
+
+# إعدادات الصفحة
+st.set_page_config(page_title="Baqit Hub", page_icon="icon.png", layout="wide")
+
+# تحميل صور الخلفية والشعار (اختياري)
+st.markdown(
     """
-    Simulated LLM Resume Analyzer
-    """
-    skills = [
-        "Communication",
-        "Problem Solving",
-        "Teamwork",
-        "Python",
-        "Critical Thinking"
-    ]
+    <style>
+    body {
+        background-color: #f5f5f0;
+        font-family: 'Cairo', sans-serif;
+    }
+    .stChatMessage {
+        direction: rtl;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
-    feedback = (
-        "Resume Analysis Result:\n"
-        "- Overall Quality: Good\n"
-        "- Strengths: Clear structure, relevant skills\n"
-        "- Improvements: Add more project details\n"
-    )
+# اختيار اللغة
+lang = st.sidebar.selectbox("Language / اللغة", ["English", "العربية"])
 
-    return skills, feedback
+# عنوان التطبيق
+st.image("logo.png", width=120)
+st.title("🇸🇦 Baqit Hub – منصة تعليمية ذكية")
 
+# إدارة المحادثة
+if "messages" not in st.session_state:
+    st.session_state.messages = []
 
-def main():
-    print("=== AI Resume Analyzer ===\n")
+# عرض المحادثة السابقة
+for msg in st.session_state.messages:
+    with st.chat_message(msg["role"]):
+        st.markdown(msg["content"])
 
-    resume_text = input("Paste your resume text here:\n")
+# إدخال المستخدم
+if prompt := st.chat_input("اكتب سؤالك هنا..." if lang == "العربية" else "Type your question here..."):
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    with st.chat_message("user"):
+        st.markdown(prompt)
 
-    skills, feedback = analyze_resume(resume_text)
+    # معالجة الاستعلام عبر LLM
+    response = process_query(prompt, lang)
 
-    print("\n--- Extracted Skills ---")
-    for skill in skills:
-        print(f"- {skill}")
-
-    print("\n--- Feedback ---")
-    print(feedback)
-
-
-if __name__ == "__main__":
-    main()
+    st.session_state.messages.append({"role": "assistant", "content": response})
+    with st.chat_message("assistant"):
+        st.markdown(response)

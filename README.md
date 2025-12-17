@@ -62,6 +62,42 @@ https://www.python.org/downloads/
 
 ```bash
 pip install streamlit
+#### 4. Verify Installation
+
+Test that Ollama is working:
+
+```bash
+ollama run qwen2.5:14b "Hello"
+```
+
+You should see a response from the model.
+
+---
+
+## 🚀 Running the Application
+
+### Start the Application
+
+```bash
+python -m streamlit run app.py
+```
+Or:
+
+```bash
+py -m streamlit run app.py
+```
+Or:
+
+```bash
+streamlit run app.py
+```
+
+
+### First Time Setup
+
+1. **Select Language**: Use the dropdown in the top-left to choose Arabic (العربية) or English
+2. **Ask a Question**: Type your question about a government service
+3. **Get Results**: The AI will match your query to a service and show detailed instructions
 
 
 ---

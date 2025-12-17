@@ -63,7 +63,6 @@ https://www.python.org/downloads/
 ```bash
 pip install streamlit
 
----
 
 
 ## 💡 Usage Examples

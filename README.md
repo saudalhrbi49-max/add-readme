@@ -106,6 +106,34 @@ def process_query(query: str, lang: str):
     llm_response = ask_llm_intent(query)
     resource = extract_resource_key(llm_response)
     return build_response(resource, "ar" if lang == "العربية" else "en")
+[
+  {
+    "platform": "Qiyas",
+    "category": "Testing",
+    "title_ar": "التحضير لاختبار القدرات",
+    "title_en": "Qiyas Exam Preparation",
+    "description_ar": "موارد لمساعدتك في التحضير لاختبار القدرات.",
+    "description_en": "Resources to help you prepare for Qiyas exam.",
+    "steps_ar": "١. سجل في موقع قياس\n٢. اختر نوع الاختبار\n٣. اطلع على المواد التدريبية",
+    "steps_en": "1. Register on Qiyas website\n2. Select exam type\n3. Review training materials",
+    "requirements_ar": "حساب في موقع قياس",
+    "requirements_en": "Qiyas account",
+    "official_link": "https://www.qiyas.sa"
+  },
+  {
+    "platform": "Coursera",
+    "category": "Courses",
+    "title_ar": "كورس برمجة بايثون",
+    "title_en": "Python Programming Course",
+    "description_ar": "تعلم أساسيات لغة بايثون عبر كورس تفاعلي.",
+    "description_en": "Learn Python basics through an interactive course.",
+    "steps_ar": "١. سجل في كورسيرا\n٢. ابحث عن Python\n٣. ابدأ الكورس",
+    "steps_en": "1. Sign up on Coursera\n2. Search for Python\n3. Start the course",
+    "requirements_ar": "بريد إلكتروني فعال",
+    "requirements_en": "Valid email address",
+    "official_link": "https://www.coursera.org"
+  }
+]
 
     # معالجة الاستعلام عبر LLM
     response = process_query(prompt, lang)

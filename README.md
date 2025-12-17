@@ -160,9 +160,9 @@ streamlit run app.py
 
 ### Example Queries (English)
 
-| Query | Expected Result |
+| Query | 
 |-------|----------------|
-| How to renew driving license? | Shows steps to renew driving license |
+| Visit the hospital portal | 
 | I want to issue a passport | Shows steps to issue passport |
 | How to pay electricity bill | Shows steps to pay electricity bill |
 | Check water bill | Shows how to check water bill |

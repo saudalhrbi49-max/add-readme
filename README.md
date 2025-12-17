@@ -1,19 +1,19 @@
+# ==============================
+# app.py
+# ==============================
 import streamlit as st
 from llm_backend import process_query
 
 # إعدادات الصفحة
 st.set_page_config(page_title="Baqit Hub", page_icon="icon.png", layout="wide")
 
-# تحميل صور الخلفية والشعار (اختياري)
+# تنسيق CSS
 st.markdown(
     """
     <style>
     body {
         background-color: #f5f5f0;
         font-family: 'Cairo', sans-serif;
-    }
-    .stChatMessage {
-        direction: rtl;
     }
     </style>
     """,
@@ -41,6 +41,18 @@ if prompt := st.chat_input("اكتب سؤالك هنا..." if lang == "العر�
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
+
+    # معالجة الاستعلام عبر LLM
+    response = process_query(prompt, lang)
+
+    st.session_state.messages.append({"role": "assistant", "content": response})
+    with st.chat_message("assistant"):
+        st.markdown(response)
+
+
+# ==============================
+# llm_backend.py
+# ==============================
 import json
 import subprocess
 
@@ -73,7 +85,7 @@ def extract_resource_key(llm_response: str):
 
 def build_response(resource, lang="en"):
     if not resource:
-        return "❌ Resource not found. حاول صياغة السؤال بشكل أوضح." if lang == "ar" else "❌ Resource not found. Please rephrase your query."
+        return "❌ لم يتم العثور على مورد. حاول صياغة السؤال بشكل أوضح." if lang == "ar" else "❌ Resource not found. Please rephrase your query."
 
     if lang == "ar":
         return f"""
@@ -106,6 +118,11 @@ def process_query(query: str, lang: str):
     llm_response = ask_llm_intent(query)
     resource = extract_resource_key(llm_response)
     return build_response(resource, "ar" if lang == "العربية" else "en")
+
+
+# ==============================
+# resources.json
+# ==============================
 [
   {
     "platform": "Qiyas",
@@ -134,10 +151,3 @@ def process_query(query: str, lang: str):
     "official_link": "https://www.coursera.org"
   }
 ]
-
-    # معالجة الاستعلام عبر LLM
-    response = process_query(prompt, lang)
-
-    st.session_state.messages.append({"role": "assistant", "content": response})
-    with st.chat_message("assistant"):
-        st.markdown(response)

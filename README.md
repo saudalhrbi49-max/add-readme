@@ -40,11 +40,28 @@ HOSPITAL_SERVICES_NAVIGATOR/
 
 ## 🛠️ Technology Stack
 
-- **Frontend Framework**: Streamlit (Python web framework)
-- **AI Model**: Qwen2.5:14b (via Ollama)
-- **Programming Language**: Python 3.8+
-- **Data Storage**: JSON (services database)
-- **Font**: Cairo (Google Fonts - supports Arabic and English)
+-
+- *Programming Language*: Python 3.8+
+- *Web Framework*: Streamlit
+- *AI Logic*: Rule-based (extendable to LLM)
+- *Data Storage*: JSON
+- *Font Support*: Arabic & English
+
+---
+
+## 📦 Installation
+
+### 1️⃣ Install Python
+
+Download and install Python from:
+https://www.python.org/downloads/
+
+---
+
+### 2️⃣ Install Dependencies
+
+```bash
+pip install streamlit
 
 ---
 

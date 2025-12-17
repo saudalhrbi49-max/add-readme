@@ -151,11 +151,12 @@ streamlit run app.py
 
 | Query | Expected Result |
 |-------|----------------|
-| كيف اجدد رخصة القيادة؟ | Shows steps to renew driving license |
-| أبي أطلع جواز سفر | Shows steps to issue passport |
-| كيف احدث السجل التجاري | Shows steps to update commercial registration |
-| كم فاتورة المياه | Shows how to check water bill |
-| كيف أنقل ملكية عداد الكهرباء | Shows steps to transfer electricity meter ownership |
+| حجز موعد في المستشفى |
+1.| الدخول على بوابة المستشفى |
+2.| تسجيل الدخول بحساب المريض |
+3.| اختيار العيادة والطبيب |
+4.| تحديد التاريخ والوقت |
+5.| تأكيد الحجز |
 
 ### Example Queries (English)
 
@@ -170,7 +171,7 @@ streamlit run app.py
 
 The AI can match multiple services in one query:
 
-**Query**: "أبغى أفتح مشروع تجاري وأحجز اسم تجاري، لكن سجلي القديم غير محدث"
+**Query**: "كيف أحجز موعد في المستشفى؟"
 
 **Result**: Shows both:
 - تجديد / التأكيد السنوي للسجل التجاري
@@ -205,8 +206,8 @@ The application currently supports **33 government services** across 5 platforms
 
 ```
 ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
-│  User Input  │────▶│  LLM Backend │────▶│   Services   │
-│  (Streamlit) │     │  (Qwen2.5)   │     │    (JSON)    │
+│ Patient Input│────▶│  LLM Engine  │────▶│   Services   │
+│ (Streamlit)  │     │ (Qwen2.5)    │     │  (JSON)     │
 └──────────────┘     └──────────────┘     └──────────────┘
         │                    │                    │
         └────────────────────┼────────────────────┘

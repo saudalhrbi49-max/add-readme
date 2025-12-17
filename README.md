@@ -178,90 +178,39 @@ The AI can match multiple services in one query:
 
 ## 📊 Supported Services
 
-{
-  "title_ar": "تغيير موعد",
-  "title_en": "Reschedule Appointment",
-  "keywords_ar": ["تغيير", "تعديل", "موعد"],
-  "keywords_en": ["reschedule", "change appointment"],
-  "steps_ar": [
-    "الدخول إلى حساب المريض",
-    "الانتقال إلى قائمة المواعيد",
-    "اختيار الموعد المراد تغييره",
-    "تحديد موعد جديد",
-    "تأكيد التعديل"
-  ],
-  "steps_en": [
-    "Login to patient account",
-    "Go to appointments list",
-    "Select the appointment",
-    "Choose a new date and time",
-    "Confirm rescheduling"
-  ]
-},
-{
-  "title_ar": "عرض السجل الطبي",
-  "title_en": "View Medical Record",
-  "keywords_ar": ["سجل", "طبي", "ملف"],
-  "keywords_en": ["medical record", "history", "file"],
-  "steps_ar": [
-    "تسجيل الدخول إلى حساب المريض",
-    "الدخول على السجل الطبي",
-    "عرض التاريخ المرضي والتقارير"
-  ],
-  "steps_en": [
-    "Login to patient account",
-    "Access medical records",
-    "View medical history and reports"
-  ]
-},
-{
-  "title_ar": "مواعيد الزيارة",
-  "title_en": "Visiting Hours",
-  "keywords_ar": ["زيارة", "مواعيد الزيارة"],
-  "keywords_en": ["visiting hours", "visit time"],
-  "steps_ar": [
-    "الدخول على موقع المستشفى",
-    "اختيار صفحة معلومات الزوار",
-    "عرض أوقات الزيارة حسب القسم"
-  ],
-  "steps_en": [
-    "Visit hospital website",
-    "Open visitor information page",
-    "Check visiting hours by department"
-  ]
-},
-{
-  "title_ar": "التواصل مع المستشفى",
-  "title_en": "Contact Hospital",
-  "keywords_ar": ["تواصل", "اتصال", "رقم المستشفى"],
-  "keywords_en": ["contact", "call hospital"],
-  "steps_ar": [
-    "الدخول على صفحة التواصل",
-    "اختيار القسم المطلوب",
-    "الاتصال أو إرسال رسالة"
-  ],
-  "steps_en": [
-    "Open contact page",
-    "Choose the required department",
-    "Call or send a message"
-  ]
-},
-{
-  "title_ar": "الاستعلام عن التأمين",
-  "title_en": "Insurance Information",
-  "keywords_ar": ["تأمين", "شركة التأمين"],
-  "keywords_en": ["insurance", "coverage"],
-  "steps_ar": [
-    "الدخول إلى حساب المريض",
-    "اختيار معلومات التأمين",
-    "عرض شركة التأمين والتغطية"
-  ],
-  "steps_en": [
-    "Login to patient account",
-    "Open insurance information",
-    "View insurance provider and coverage"
-  ]
-}
+---
+[
+  {
+    "key": "appointment_booking",
+    "title_ar": "حجز موعد",
+    "title_en": "Book Appointment"
+  },
+  {
+    "key": "appointment_cancel",
+    "title_ar": "إلغاء موعد",
+    "title_en": "Cancel Appointment"
+  },
+  {
+    "key": "appointment_reschedule",
+    "title_ar": "تغيير موعد",
+    "title_en": "Reschedule Appointment"
+  },
+  {
+    "key": "lab_results",
+    "title_ar": "نتائج التحاليل",
+    "title_en": "Lab Test Results"
+  },
+  {
+    "key": "medical_record",
+    "title_ar": "السجل الطبي",
+    "title_en": "Medical Record"
+  },
+  {
+    "key": "contact_hospital",
+    "title_ar": "التواصل مع المستشفى",
+    "title_en": "Contact Hospital"
+  }
+]
 
 ---
 
